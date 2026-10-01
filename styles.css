@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matrix Breaker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="loadingScreen" class="loading-screen visible">
+      <div class="loading-bg"></div>
+      <div class="loading-content">
+        <div class="brand-wrap">
+          <div class="mini-logo">MB</div>
+          <div>
+            <div class="brand-sub">NEURAL BATTLEFIELD</div>
+            <h1>Matrix Breaker</h1>
+          </div>
+        </div>
+
+        <div class="loading-arena">
+          <div class="avatar avatar-red">
+            <span class="head"></span>
+            <span class="body"></span>
+          </div>
+          <div class="avatar avatar-blue">
+            <span class="head"></span>
+            <span class="body"></span>
+          </div>
+          <div class="avatar avatar-gold">
+            <span class="head"></span>
+            <span class="body"></span>
+          </div>
+          <div class="avatar avatar-cyan">
+            <span class="head"></span>
+            <span class="body"></span>
+          </div>
+        </div>
+
+        <div class="loading-bar-wrap">
+          <div class="loading-bar">
+            <div class="loading-fill" id="loadingFill"></div>
+          </div>
+          <div class="loading-text" id="loadingText">Booting up the arena...</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="authScreen" class="auth-screen hidden">
+      <div class="auth-panel">
+        <div class="auth-header">
+          <div class="brand-mark">MB</div>
+          <div>
+            <div class="eyebrow">WELCOME BACK</div>
+            <h2>Matrix Breaker</h2>
+          </div>
+        </div>
+
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-mode="login">Login</button>
+          <button class="auth-tab" data-mode="create">Create Account</button>
+          <button class="auth-tab hidden-admin-tab" id="adminTab">Admin</button>
+        </div>
+
+        <form id="authForm">
+          <label>
+            <span>Username</span>
+            <input id="usernameInput" type="text" maxlength="18" placeholder="Enter your username" required />
+          </label>
+
+          <label>
+            <span>Code</span>
+            <input id="codeInput" type="password" maxlength="20" placeholder="Enter your access code" required />
+          </label>
+
+          <button type="submit" class="primary-btn" id="authSubmitBtn">Enter Matrix</button>
+        </form>
+
+        <div class="auth-help">
+          <span>New to the arena?</span>
+          <button type="button" id="quickCreateBtn" class="text-btn">Create a starter account</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="appShell" class="app-shell hidden">
+      <header class="topbar">
+        <div class="topbar-left">
+          <div class="logo-mark">MB</div>
+          <div>
+            <div class="eyebrow">MATRIX BREAKER</div>
+            <div class="title">Battle Pass Platform</div>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <div class="cyber-coin">
+            <span class="coin-icon">◈</span>
+            <span id="cyberBitsDisplay">0</span>
+          </div>
+          <button class="ghost-btn" id="logoutBtn">Log Out</button>
+        </div>
+      </header>
+
+      <aside class="sidebar">
+        <div class="profile-card">
+          <div class="avatar-badge" id="profileAvatar">N</div>
+          <div>
+            <div class="profile-name" id="profileName">Player</div>
+            <div class="profile-role" id="profileRole">Soldier</div>
+          </div>
+        </div>
+
+        <nav class="nav-list">
+          <button class="nav-item active" data-section="home">Home</button>
+          <button class="nav-item" data-section="categories">Categories</button>
+          <button class="nav-item" data-section="locker">Locker</button>
+          <button class="nav-item" data-section="shop">Shop</button>
+          <button class="nav-item" data-section="leaderboard">Leaderboard</button>
+          <button class="nav-item" data-section="achievements">Achievements</button>
+          <button class="nav-item" data-section="friends">Friends</button>
+          <button class="nav-item" data-section="settings">Settings</button>
+        </nav>
+      </aside>
+
+      <main class="content-area">
+        <section class="section active" id="homeSection"></section>
+        <section class="section" id="categoriesSection"></section>
+        <section class="section" id="lockerSection"></section>
+        <section class="section" id="shopSection"></section>
+        <section class="section" id="leaderboardSection"></section>
+        <section class="section" id="achievementsSection"></section>
+        <section class="section" id="friendsSection"></section>
+        <section class="section" id="settingsSection"></section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

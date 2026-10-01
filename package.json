@@ -1,0 +1,10 @@
+{
+  "name": "matrix-breaker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Matrix Breaker — a Fortnite-inspired browser game platform prototype",
+  "scripts": {
+    "start": "python3 -m http.server 3000",
+    "serve": "python3 -m http.server 3000"
+  }
+}
